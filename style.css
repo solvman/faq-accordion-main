@@ -24,7 +24,7 @@
   height: 31px;
   display: inline-block;
   background-repeat: no-repeat;
-  transition: all 0.3s ease;
+  transition: all 350ms ease-in-out;
 }
 
 .icon-plus::before {
@@ -44,9 +44,11 @@
 }
 
 .accordion-content {
-  display: none;
+  height: 0;
+  overflow: hidden;
+  transition: height 2000ms ease-in-out;
 }
 
 .accordion-content.active {
-  display: block;
+  height: auto;
 }

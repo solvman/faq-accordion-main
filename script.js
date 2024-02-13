@@ -6,10 +6,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const icon = header.querySelector(".accordion-icon");
     const content = item.querySelector(".accordion-content");
 
+    content.style.height = "0px";
+
     header.addEventListener("click", () => {
       accordionItems.forEach((item) => {
         if (item !== content.parentElement) {
-          item.querySelector(".accordion-content").classList.remove("active");
+          const otherContent = item.querySelector(".accordion-content");
+          otherContent.classList.remove("active");
+          otherContent.style.height = "0px";
+
           item.querySelector(".accordion-icon").classList.remove("icon-minus");
           item.querySelector(".accordion-icon").classList.add("icon-plus");
         }
@@ -18,9 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
       content.classList.toggle("active");
 
       if (content.classList.contains("active")) {
+        content.style.height = content.scrollHeight + "px";
         icon.classList.add("icon-minus");
         icon.classList.remove("icon-plus");
       } else {
+        content.style.height = "0px";
         icon.classList.add("icon-plus");
         icon.classList.remove("icon-minus");
       }
