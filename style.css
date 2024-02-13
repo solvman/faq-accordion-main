@@ -24,6 +24,7 @@
   height: 31px;
   display: inline-block;
   background-repeat: no-repeat;
+  transition: all 0.3s ease;
 }
 
 .icon-plus::before {
