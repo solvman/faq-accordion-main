@@ -46,7 +46,7 @@
 .accordion-content {
   height: 0;
   overflow: hidden;
-  transition: height 2000ms ease-in-out;
+  transition: height 350ms ease-in-out;
 }
 
 .accordion-content.active {

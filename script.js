@@ -15,8 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
           otherContent.classList.remove("active");
           otherContent.style.height = "0px";
 
-          item.querySelector(".accordion-icon").classList.remove("icon-minus");
-          item.querySelector(".accordion-icon").classList.add("icon-plus");
+          item
+            .querySelector(".accordion-icon")
+            .classList.replace("icon-minus", "icon-plus");
         }
       });
 
@@ -24,12 +25,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (content.classList.contains("active")) {
         content.style.height = content.scrollHeight + "px";
-        icon.classList.add("icon-minus");
-        icon.classList.remove("icon-plus");
+        icon.classList.replace("icon-plus", "icon-minus");
       } else {
         content.style.height = "0px";
-        icon.classList.add("icon-plus");
-        icon.classList.remove("icon-minus");
+        icon.classList.replace("icon-minus", "icon-plus");
       }
     });
   });
