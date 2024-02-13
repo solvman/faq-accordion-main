@@ -13,3 +13,10 @@
 .icon-minus::before {
   background-image: url(./assets/images/icon-minus.svg);
 }
+
+.accordion-item header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
