@@ -1,0 +1,15 @@
+.icon::before {
+  content: "";
+  width: 30px;
+  height: 31px;
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+
+.icon-plus::before {
+  background-image: url(./assets/images/icon-plus.svg);
+}
+
+.icon-minus::before {
+  background-image: url(./assets/images/icon-minus.svg);
+}
