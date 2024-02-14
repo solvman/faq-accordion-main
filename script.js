@@ -6,8 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const icon = header.querySelector(".accordion-icon");
     const content = item.querySelector(".accordion-content");
 
-    content.style.height = "0px";
-
     header.addEventListener("click", () => {
       accordionItems.forEach((item) => {
         if (item !== content.parentElement) {
