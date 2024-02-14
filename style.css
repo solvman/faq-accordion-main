@@ -1,5 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
+:root {
+  --color-primary-100: hsl(0, 0%, 100%);
+  --color-primary-200: hsl(275, 100%, 97%);
+  --color-primary-500: hsl(292, 16%, 49%);
+  --color-primary-900: hsl(292, 42%, 14%);
+  --color-accent-500: hsla(281, 83%, 54%, 1);
+
+  --font-family: "Work Sans", sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 600;
+  --font-weight-bold: 700;
+}
+
+/* Reset */
 *,
 *::before,
 *::after {
@@ -8,10 +22,23 @@
   padding: 0;
 }
 
-svg {
-  display: block;
-  max-width: 100%;
+/* Typography */
+
+body {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-primary-500);
+  line-height: 1.5;
 }
+
+h1,
+h2,
+h3 {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-900);
+}
+
+/* Utility classes */
 
 .sr-only {
   position: absolute;
@@ -42,12 +69,23 @@ svg {
   background-image: url(./assets/images/icon-minus.svg);
 }
 
-.accordion-item header {
+/* Accordion */
+
+.accordion-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1.5rem;
   cursor: pointer;
+}
+
+.accordion-header h3 {
+  transition: color 350ms ease-in-out;
+}
+
+.accordion-header:hover,
+.accordion-header:hover h3 {
+  color: var(--color-accent-500);
 }
 
 .accordion-content {
