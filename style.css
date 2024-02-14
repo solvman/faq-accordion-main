@@ -26,11 +26,25 @@
 
 body {
   background-color: var(--color-primary-200);
+  background-image: url(./assets/images/background-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
   min-width: 375px;
   height: max(100vh, 550px);
-  display: grid;
-  place-content: center;
   padding: 1.5rem;
+}
+
+@media screen and (min-width: 650px) {
+  body {
+    background-image: url(./assets/images/background-pattern-desktop.svg);
+  }
+}
+
+main {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Typography */
@@ -46,14 +60,15 @@ body {
 h1,
 h2,
 h3 {
-  font-weight: var(--font-weight-bold);
   color: var(--color-primary-900);
 }
 
 h2 {
+  font-weight: var(--font-weight-bold);
   font-size: clamp(2rem, 1.4718rem + 2.2535vw, 3.5rem);
 }
 h3 {
+  font-weight: var(--font-weight-medium);
   font-size: clamp(1rem, 0.956rem + 0.1878vw, 1.125rem);
 }
 
@@ -92,9 +107,34 @@ h3 {
 
 /* Accordion */
 
+.accordion {
+  width: min(100%, 600px);
+  background-color: var(--color-primary-100);
+  border-radius: 0.5rem;
+  box-shadow: 0px 32px 56px 0px rgba(80, 0, 118, 0.1);
+  padding: min(6.4vw, 2.5rem);
+}
+
+.accordion-item {
+  padding-block: min(5.3vw, 1.5rem);
+}
+
+.accordion-item:first-of-type {
+  padding-top: 0;
+}
+
+.accordion-item:last-of-type {
+  padding-bottom: 0;
+}
+
+.accordion-item:not(:first-of-type) {
+  border-top: 1px solid var(--color-primary-200);
+}
+
 .accordion-title {
   display: inline-flex;
   align-items: center;
+  margin-bottom: min(6.4vw, 2rem);
 }
 
 .accordion-title::before {
