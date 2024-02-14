@@ -6,6 +6,11 @@
   padding: 0;
 }
 
+svg {
+  display: block;
+  max-width: 100%;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
