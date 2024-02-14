@@ -22,6 +22,10 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       content.classList.toggle("active");
+      const isExpanded = content.classList.contains("active");
+
+      header.setAttribute("aria-expanded", isExpanded);
+      content.setAttribute("aria-hidden", !isExpanded);
 
       if (content.classList.contains("active")) {
         content.style.height = content.scrollHeight + "px";
