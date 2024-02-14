@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/solvman/faq-accordion-main](https://github.com/solvman/faq-accordion-main)
+- Live Site URL: [https://soft-frangipane-8d8305.netlify.app/](https://soft-frangipane-8d8305.netlify.app/)
 
 ## My process
 
