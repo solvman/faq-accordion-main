@@ -24,13 +24,15 @@
 }
 
 /* Global */
+html {
+  min-width: 375px;
+}
 
 body {
   background-color: var(--color-primary-200);
   background-image: url(./assets/images/background-pattern-mobile.svg);
   background-repeat: no-repeat;
   background-size: contain;
-  min-width: 375px;
   height: max(100vh, 550px);
   padding: 1.5rem;
 }
